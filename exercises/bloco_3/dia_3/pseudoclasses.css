@@ -1,0 +1,40 @@
+div {
+    background-color: blanchedalmond;
+}
+
+div:hover{
+    border: 1px solid black;
+}
+
+.cor-p {
+    font-family: sans-serif;
+    color: blue;
+    font-style: italic;
+}
+
+.cor-s{
+    font-family: fantasy;
+    color: blueviolet;
+}
+
+.cor-com {
+    font-family: cursive;
+    font-size: 24px;
+    color: crimson;
+    font-style: italic;
+}
+
+.cor-esc {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cor-cla {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+    color: cadetblue;
+    font-style: italic;
+}
+
+.terceira-div {
+    height: 200px;
+}
