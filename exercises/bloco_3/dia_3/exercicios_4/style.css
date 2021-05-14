@@ -1,0 +1,57 @@
+ol li {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.segundo, .quarto {
+    color: green;
+}
+
+.segundo, .terceiro, .quinto {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+h1, h3 {
+    color: red;
+}
+
+li {
+    font-size: 20px;
+}
+
+.python, .java, .javascript {
+    color: blue;
+}
+
+.java, .javascript {
+    background-color: pink;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.stackoverflow:hover {
+   color: orange; 
+}
+
+.w3school:hover {
+    color: green;
+}
+
+.mozilla:hover {
+    color: black;
+}
+
+.devdocs:hover {
+    color: yellow;
+}
+
+.trybe:hover {
+    color: green;
+}
