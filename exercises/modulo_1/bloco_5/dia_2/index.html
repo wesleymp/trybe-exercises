@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function createElements(tagElement, tagCreate, className) {
+        let getElementHTML = document.querySelector(tagElement);
+        let createElement = document.createElement(tagCreate);
+        if (className !== null) {
+          return getElementHTML.appendChild(createElement).classList = className;
+        } else {
+          return getElementHTML.appendChild(createElement);
+        }
+      }
+
+      createElements("body", "h1", null);
+      createElements("body", "div", "main-content");
+      createElements(".main-content", "div", "center-content");
+      createElements(".center-content", "p", null).innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";;
+
+      createElements(".main-content", "div", "left-content");
+      createElements(".main-content", "div", "right-content");
+
+      createElements(".left-content", "img", "small-image");
+      document.querySelector("img").src = "https://picsum.photos/200";
+
+      createElements(".right-content ", "ul", null);
+      for (let index = 1; index <= 10; index += 1) {
+        createElements("ul", "li", null).innerHTML = index;
+      }
+
+      createElements(".main-content", "h3", null).innerHTML = "Olá, Mundo!";
+      createElements(".main-content", "h3", null).innerHTML = "Esse titlo.";
+      createElements(".main-content", "h3", null).innerHTML = "Aquele titlo.";
+    </script>
+  </body>
+</html>
