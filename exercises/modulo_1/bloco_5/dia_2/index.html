@@ -67,7 +67,7 @@
         }
       }
 
-      createElements("body", "h1", null);
+      createElements("body", "h1", "title").innerHTML = "Titlo H1";
       createElements("body", "div", "main-content");
       createElements(".main-content", "div", "center-content");
       createElements(".center-content", "p", null).innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";;
@@ -83,9 +83,27 @@
         createElements("ul", "li", null).innerHTML = index;
       }
 
-      createElements(".main-content", "h3", null).innerHTML = "Olá, Mundo!";
-      createElements(".main-content", "h3", null).innerHTML = "Esse titlo.";
-      createElements(".main-content", "h3", null).innerHTML = "Aquele titlo.";
+      createElements(".main-content", "h3", "description").innerHTML = "Olá, Mundo!";
+      createElements(".main-content", "h3", "description").innerHTML = "Esse titlo.";
+      createElements(".main-content", "h3", "description").innerHTML = "Aquele titlo.";
+
+      let divsLeft = document.querySelector(".main-content");
+      divsLeft.removeChild(divsLeft.children[1]);
+
+      let divsRight = document.querySelector(".right-content");
+      divsRight.style.cssText = "margin: auto;";
+
+      let divsCenter = document.querySelector(".center-content");
+      divsRight.style.cssText = "background-color: green;";
+
+      let listaUL = document.querySelector("ul");
+      for (let index = 0; index < listaUL.children.length; index += 1) {
+        console.log(index);
+        if (listaUL.children[index].innerHTML === "9" || listaUL.children[index].innerHTML === "10") {
+          listaUL.removeChild(listaUL.children[index]);
+          index -= 1;
+        }
+      }
     </script>
   </body>
 </html>
