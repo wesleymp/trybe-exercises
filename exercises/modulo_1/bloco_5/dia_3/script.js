@@ -82,3 +82,61 @@ buttonFriday.addEventListener("click", function(){
     }
   }
 });
+
+//-- Zoom ao passar o mouse por cima do LI
+const getLiToZoom = document.querySelectorAll(".day");
+for (let i = 0; i < getLiToZoom.length; i += 1) {
+  getLiToZoom[i].addEventListener("mouseover", function(event){
+      event.target.style.fontSize = "32px";
+  });
+  getLiToZoom[i].addEventListener("mouseout", function(event){
+    event.target.style.fontSize = "20px";
+  });
+}
+
+//-- Tag span criada
+function createCooking(){
+  const myTasks = document.querySelector(".my-tasks");
+  const createSpan = document.createElement("span");
+  createSpan.innerHTML = "Cozinhar:";
+  myTasks.appendChild(createSpan);
+}
+createCooking();
+
+//-- Adicionado div cor
+function addSubtitleColor(cor) {
+  const myTasks = document.querySelector(".my-tasks");
+  const createDivTask = document.createElement("div");
+  createDivTask.className = "task";
+  createDivTask.style.backgroundColor = cor;
+  myTasks.appendChild(createDivTask);
+}
+addSubtitleColor("green");
+
+//-- Tarefa selecionada com a cor
+const colorSelected = document.querySelector(".task");
+function taskSelected() {
+  colorSelected.addEventListener("click", function(){
+    if (colorSelected.classList[1] === "selected") {
+      colorSelected.className = "task";
+    } else {
+      colorSelected.className += " selected";
+    }
+  });
+}
+taskSelected();
+
+//-- Adicionado ao dia a tarefa selecionada com a cor
+function colorDayWeek() {
+  const colorTaskSelected = document.querySelector(".task");
+  for (let i = 0; i < getLiToZoom.length; i += 1) {
+    getLiToZoom[i].addEventListener("click", function(){
+      if (colorTaskSelected.classList[1] === "selected") {
+        getLiToZoom[i].style.color = "green";
+      } else {
+        getLiToZoom[i].style.color = "rgb(119,119,119)";
+      }
+    });
+  }
+}
+colorDayWeek();
