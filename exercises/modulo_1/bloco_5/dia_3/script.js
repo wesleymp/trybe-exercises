@@ -111,5 +111,17 @@ function addSubtitleColor(cor) {
   createDivTask.style.backgroundColor = cor;
   myTasks.appendChild(createDivTask);
 }
-
 addSubtitleColor("green");
+
+//-- Tarefa Selecionada com a cor
+const colorSelected = document.querySelector(".task");
+function taskSelected() {
+  colorSelected.addEventListener("click", function(){
+    if (colorSelected.classList[1] === "selected") {
+      colorSelected.className = "task";
+    } else {
+      colorSelected.className += " selected";
+    }
+  });
+}
+taskSelected();
