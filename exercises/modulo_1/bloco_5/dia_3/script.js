@@ -87,10 +87,10 @@ buttonFriday.addEventListener("click", function(){
 const getLiToZoom = document.querySelectorAll(".day");
 for (let i = 0; i < getLiToZoom.length; i += 1) {
   getLiToZoom[i].addEventListener("mouseover", function(event){
-      event.target.style.cssText = "font-size: 32px";
+      event.target.style.fontSize = "32px";
   });
   getLiToZoom[i].addEventListener("mouseout", function(event){
-    event.target.style.cssText = "font-size: 20px";
+    event.target.style.fontSize = "20px";
   });
 }
 
@@ -113,7 +113,7 @@ function addSubtitleColor(cor) {
 }
 addSubtitleColor("green");
 
-//-- Tarefa Selecionada com a cor
+//-- Tarefa selecionada com a cor
 const colorSelected = document.querySelector(".task");
 function taskSelected() {
   colorSelected.addEventListener("click", function(){
@@ -125,3 +125,18 @@ function taskSelected() {
   });
 }
 taskSelected();
+
+//-- Adicionado ao dia a tarefa selecionada com a cor
+function colorDayWeek() {
+  const colorTaskSelected = document.querySelector(".task");
+  for (let i = 0; i < getLiToZoom.length; i += 1) {
+    getLiToZoom[i].addEventListener("click", function(){
+      if (colorTaskSelected.classList[1] === "selected") {
+        getLiToZoom[i].style.color = "green";
+      } else {
+        getLiToZoom[i].style.color = "rgb(119,119,119)";
+      }
+    });
+  }
+}
+colorDayWeek();
