@@ -93,3 +93,11 @@ for (let i = 0; i < getLiToZoom.length; i += 1) {
     event.target.style.cssText = "font-size: 20px";
   });
 }
+
+//-- Tag span criada
+function createCooking(){
+  const myTasks = document.querySelector(".my-tasks");
+  const createSpan = document.createElement("span");
+  myTasks.appendChild(createSpan);
+}
+createCooking();
