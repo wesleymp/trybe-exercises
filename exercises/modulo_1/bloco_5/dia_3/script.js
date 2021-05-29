@@ -82,3 +82,14 @@ buttonFriday.addEventListener("click", function(){
     }
   }
 });
+
+//-- Zoom ao passar o mouse por cima do LI
+const getLiToZoom = document.querySelectorAll(".day");
+for (let i = 0; i < getLiToZoom.length; i += 1) {
+  getLiToZoom[i].addEventListener("mouseover", function(event){
+      event.target.style.cssText = "font-size: 32px";
+  });
+  getLiToZoom[i].addEventListener("mouseout", function(event){
+    event.target.style.cssText = "font-size: 20px";
+  });
+}
