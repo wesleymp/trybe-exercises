@@ -140,3 +140,28 @@ function colorDayWeek() {
   }
 }
 colorDayWeek();
+
+function addTasks() {
+  const valueInput = document.querySelector("#task-input");
+  const button = document.querySelector("#btn-add");
+  const listTask = document.querySelector(".task-list");
+
+  button.addEventListener("click", function(){
+    const createElementLi = document.createElement("li");
+    listTask.appendChild(createElementLi).innerHTML = valueInput.value;
+    if (valueInput.value === "") {
+      alert("Insira alguma tarefa");
+    }
+  });
+
+  valueInput.addEventListener("keypress", function(keyEnter){
+    if (keyEnter.key === "Enter") {
+      const createElementLi = document.createElement("li");
+      listTask.appendChild(createElementLi).innerHTML = valueInput.value;
+      if (valueInput.value === "") {
+        alert("Insira alguma tarefa");
+      }
+    }
+  });
+}
+addTasks();
