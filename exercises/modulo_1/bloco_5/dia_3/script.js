@@ -98,6 +98,18 @@ for (let i = 0; i < getLiToZoom.length; i += 1) {
 function createCooking(){
   const myTasks = document.querySelector(".my-tasks");
   const createSpan = document.createElement("span");
+  createSpan.innerHTML = "Cozinhar:";
   myTasks.appendChild(createSpan);
 }
 createCooking();
+
+//-- Adicionado div cor
+function addSubtitleColor(cor) {
+  const myTasks = document.querySelector(".my-tasks");
+  const createDivTask = document.createElement("div");
+  createDivTask.className = "task";
+  createDivTask.style.backgroundColor = cor;
+  myTasks.appendChild(createDivTask);
+}
+
+addSubtitleColor("green");
