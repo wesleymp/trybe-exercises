@@ -40,8 +40,16 @@ function createButtonHoliday() {
   getDivButton.appendChild(createButton).className = "btn-holiday";
 }
 
+function createButtonFriday() {
+  const createButton = document.createElement("button");
+  const getDivButton = document.querySelector(".buttons-container");
+  createButton.innerHTML = "Sexta-feira";
+  getDivButton.appendChild(createButton).className = "btn-friday";
+}
+
 listWeekDays();
-createButtonHoliday()
+createButtonHoliday();
+createButtonFriday();
 
 const buttonHoliday = document.querySelector(".btn-holiday");
 buttonHoliday.addEventListener("click", function(){
