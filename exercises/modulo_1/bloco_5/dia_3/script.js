@@ -40,10 +40,17 @@ function createButtonHoliday() {
   getDivButton.appendChild(createButton).className = "btn-holiday";
 }
 
-function holidays(dayHoliday){
-
-}
-
 listWeekDays();
-holidays();
 createButtonHoliday()
+
+const buttonHoliday = document.querySelector(".btn-holiday");
+buttonHoliday.addEventListener("click", function(){
+  const dayHoliday = document.querySelectorAll(".holiday");
+  for (let i = 0; i < dayHoliday.length; i += 1) {
+    if (dayHoliday[i].style.backgroundColor === "white") {
+      dayHoliday[i].style.backgroundColor = "rgb(238,238,238)";
+    }else {
+      dayHoliday[i].style.backgroundColor = "white"
+    }
+  }
+});
