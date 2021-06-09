@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulário</title>
+</head>
+<body>
+  <main>
+    <section>
+      <form>
+        <!--Dados Pessoais-->
+        <fieldset id="dp">
+          <label for="name">Nome:</label>
+          <input type="text" name="name" id="name" placeholder="Seu nome" maxlength="40" required>
+          <label for="email">Email:</label>
+          <input type="text" name="email" id="email" placeholder="Seu email" maxlength="50" required>
+          <label for="cpf">CPF:</label>
+          <input type="text" name="cpf" id="cpf" placeholder="Seu cpf" maxlength="11" required>
+          <label for="adress">CPF:</label>
+          <input type="text" name="adress" id="adress" placeholder="Seu endereço" maxlength="28" required>
+          <label for="uf">Estado:</label>
+          <select name="uf" id="uf" required></select>
+          <label for="casa">
+            <input type="radio" name="tipo" id="casa" required> Casa
+          </label>
+          <label for="apartamento">
+            <input type="radio" name="tipo" id="apartamento" required> Apartamento
+          </label>
+        </fieldset>
+        <!--Último Emprego-->
+        <fieldset id="ue">
+          <label for="ResumeCurriculum">Resumo do currículo</label>
+          <textarea name="ResumeCurriculum" id="ResumeCurriculum" cols="30" rows="5" maxlength="1000" required></textarea>
+          <label for="office">Cargo:</label>
+          <input type="text" name="office" id="office" placeholder="Seu cargo" maxlength="40" required>
+          <label for="descriOffice">Descrição do Cargo:</label>
+          <input type="text" name="descriOffice" id="descriOffice" placeholder="Descrição do Cargo" maxlength="500" required>
+          <label for="date">Data:</label>
+          <input type="text" name="date" id="date" placeholder="dd/mm/aaaa" maxlength="10" required>
+        </fieldset>
+        <div class="buttons">
+          <button type="submit" id="submit">Enviar</button>
+          <button type="reset" id="reset">Limpar Campos</button>
+        </div>
+      </form>
+      <section>
+        <div class="conteudo">
+          <p><strong>Nome:</strong> <span id="resultName"></span></p>
+          <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+          <p><strong>CPF:</strong> <span id="resultCPF"></span></p>
+          <p><strong>Estado:</strong> <span id="resultState"></span></p>
+          <p><strong>Complemento:</strong> <span id="resultTipo"></span></p>
+          <hr>
+          <p><strong>Resumo do currículo:</strong> <span id="resultResumeCurriculum"></span></p>
+          <p><strong>Cargo:</strong> <span id="resultOffice"></span></p>
+          <p><strong>Descrição do Cargo:</strong> <span id="resultDescriOffice"></span></p>
+          <p><strong>Data:</strong> <span id="resultDate"></span></p>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
