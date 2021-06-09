@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulário</title>
+</head>
+<body>
+  <main>
+    <section>
+      <fieldset>
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" placeholder="Seu nome" maxlength="40" required>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="Seu email" maxlength="50" required>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="Seu cpf" maxlength="11" required>
+        <label for="adress">CPF:</label>
+        <input type="text" name="adress" id="adress" placeholder="Seu endereço" maxlength="28" required>
+        <label for="uf">Estado:</label>
+        <select name="uf" id="uf" required></select>
+        <label for="casa">
+          <input type="radio" name="tipo" id="casa" required>Casa
+        </label>
+        <label for="apartamento">
+          <input type="radio" name="tipo" id="apartamento" required>Apartamento
+        </label>
+      </fieldset>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
