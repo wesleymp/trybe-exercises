@@ -36,4 +36,9 @@ function federalUnit() {
     uf.appendChild(createOptionStates);
   }
 }
-federalUnit();
+
+window.onload = function () {
+  federalUnit();
+  const btnSubmit = document.querySelector('#submit');
+  const btnClear = document.querySelector('#reset');
+}
