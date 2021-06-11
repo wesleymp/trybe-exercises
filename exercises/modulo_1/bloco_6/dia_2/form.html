@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link href="dist/css/DatePickerX.min.css" rel="stylesheet">
+  <link href="dist/css/validation.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulário</title>
+</head>
+<body>
+  <main>
+    <section class="container mt-5">
+      <form>
+        <!--Dados Pessoais-->
+        <fieldset id="dp">
+          <div>
+            <label class="form-label" for="name">Nome:</label>
+            <input class="form-control validate" type="text" name="name" id="name" placeholder="Seu nome" maxlength="40" data-validate="required">
+          </div>
+          <div>
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-control validate" type="text" name="email" id="email" placeholder="Seu email" maxlength="50" data-validate="required">
+          </div>
+          <div>
+            <label class="form-label" for="cpf">CPF:</label>
+            <input class="form-control validate" type="text" name="cpf" id="cpf" placeholder="Seu cpf" maxlength="11" data-validate="required">
+          </div>
+          <div>
+            <label class="form-label" for="adress">Edereço:</label>
+            <input class="form-control validate" type="text" name="adress" id="adress" placeholder="Seu endereço" maxlength="28" data-validate="required">
+          </div>
+          <div>
+            <label class="form-label" for="uf">Estado:</label>
+            <select class="form-control validate" name="uf" id="uf" data-validate="required"></select>
+          </div>
+          <div>
+            <label class="form-check-label" for="casa">
+              <input class="form-check-input" type="radio" name="tipo" id="casa" checked> Casa
+            </label>
+            <label class="form-check-label" for="apartamento">
+              <input class="form-check-input" type="radio" name="tipo" id="apartamento"> Apartamento
+            </label>
+          </div>
+        </fieldset>
+        <!--Último Emprego-->
+        <fieldset id="ue">
+          <div>
+            <label class="form-label" for="ResumeCurriculum">Resumo do currículo</label>
+            <textarea class="form-control validate" name="ResumeCurriculum" id="ResumeCurriculum" cols="30" rows="5" maxlength="1000" data-validate="required"></textarea>
+          </div>
+          <div>
+            <label class="form-label" for="office">Cargo:</label>
+            <input class="form-control validate" type="text" name="office" id="office" placeholder="Seu cargo" maxlength="40" data-validate="required">
+          </div>
+          <div>
+            <label class="form-label" for="descriOffice">Descrição do Cargo:</label>
+            <input class="form-control validate" type="text" name="descriOffice" id="descriOffice" placeholder="Descrição do Cargo" maxlength="500" data-validate="required">
+          </div>
+          <div>
+            <label class="form-label" for="date">Data:</label>
+            <input class="form-control validate" type="text" name="date" id="date" placeholder="dd/mm/aaaa" data-validate="required">
+          </div>
+        </fieldset>
+        <div class="buttons">
+          <button class="btn btn-success mt-3" type="submit" id="submit">Enviar</button>
+          <button class="btn btn-warning mt-3" type="reset" id="reset">Limpar Campos</button>
+        </div>
+      </form>
+      <section>
+        <div id="infos"></div>
+      </section>
+    </section>
+  </main>
+  <script src="dist/js/DatePickerX.min.js"></script>
+  <script src="dist/js/validation.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
