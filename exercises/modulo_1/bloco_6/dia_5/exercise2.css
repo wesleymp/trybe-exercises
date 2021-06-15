@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+/* Menu */
+#btn-menu {
+  display: inline-block;
+  background-color: beige;
+  width: 100%;
+  padding: 10px;
+}
+
+header {
+  display: none;
+  background-color: beige;
+  padding: 10px;
+  line-height: 25px;
+}
+
+header p {
+  font-size: 20px;
+}
+
+header nav ul li {
+  color: rgb(175, 121, 49);
+  padding: 3px;
+}
+
+header nav ul li:hover {
+  background-color: burlywood;
+  color: beige;
+  border-radius: 3px;
+}
+
+/* Captulos do Livro */
+.aside-one {
+  padding: 20px;
+}
+
+.aside-one ul {
+  display: none;
+  list-style: none;
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+/* Informações do Livro */
+.aside-two {
+  padding: 20px;
+  background-color: beige;
+}
+
+.aside-two ul {
+  display: none;
+  list-style: none;
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+/* Roda Pé*/
+footer {
+  background-color: beige;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer > p:nth-child(2) {
+  font-size: 16px;
+  order: 2;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+footer p:nth-child(3) {
+  padding: 10px;
+  order: 3;
+  font-style: italic;
+  font-size: 14px;
+}
+
+
+/* Médio */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Grande */
+@media screen and (min-width: 992px) {
+
+}
