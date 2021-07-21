@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  border: 1px solid gray;
+  width: 350px;
+  height: 100px;
+  margin: 5px 5px 5px 5px;
+}
+
+.infos {
+  line-height: 10px;
+}
