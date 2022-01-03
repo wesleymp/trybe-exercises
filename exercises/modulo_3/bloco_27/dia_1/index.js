@@ -24,4 +24,18 @@ app.get('/user', async (_req, res) => {
   return res.status(200).json(findAllUsers);
 });
 
+app.get('/user/:id', async (req, res) => {
+  const id = req.params;
+  const user = await userModel.findUser(id);
+
+  if (!user) {
+    return res.status(404).json({
+      "error": true,
+      "message": "Usuário não encontrado",
+    });
+  }
+
+  return res.status(200).json(user);
+});
+
 app.listen(PORT, console.log(`Running PORT ${PORT}`));
