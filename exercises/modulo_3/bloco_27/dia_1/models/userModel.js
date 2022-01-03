@@ -11,6 +11,18 @@ const create = async (firstName, lastName, email, password) => {
   }
 };
 
+const findAllUsers = async () => {
+  try {
+    const conn = await connect();
+    const query = await conn.collection('users').find().toArray();
+
+    return query;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 module.exports = {
   create,
+  findAllUsers,
 };
